@@ -2,11 +2,12 @@
 
 document.getElementById('btn').addEventListener('click', async function(){
 
-  function Repo(repoName,language,forks,counts,url){
+  function Repo(repoName,language,forks,counts,watchers,url){
     this.repoName = repoName;
     this.language = language;
     this.forks = forks;
     this.counts = counts;
+    this.watchers = watchers;
     this.url = url;
   }
 
@@ -61,6 +62,7 @@ document.getElementById('btn').addEventListener('click', async function(){
            <div id="other">
            <p>Forks: ${repo.forks}</p>
            <p>Stars: ${repo.counts}</p>
+           <p>Watchers: ${repo.watchers}</p>
            </div>
           <a href="${repo.url}" target="_blank" >Source Code</a>
         </div>`
